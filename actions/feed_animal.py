@@ -1,4 +1,5 @@
 import os
+from arboretum import Arboretum
 from animals.feed_animals import feed_river_dolphin
 
 def feed_animal():
@@ -13,12 +14,10 @@ def feed_animal():
     print("7. Ope'ape'a")
     print("8. Happy-Face Spider")
 
-    choice = input("\nChoose animal to feed. \n>_ ")
-
 def food_menu():
   
     feed_animal()
-    choice = input(">_ ")
+    choice = input("\nChoose animal to feed.\n>_ ")
 
     if choice == "1":
         pass
@@ -44,6 +43,4 @@ def food_menu():
 
     # if choice != "8":
     #     main_menu()
-
-food_menu()
  
