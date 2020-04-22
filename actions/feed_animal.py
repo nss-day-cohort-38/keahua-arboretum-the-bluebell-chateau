@@ -1,7 +1,8 @@
 import os
-from animals import RiverDolphin
+from arboretum import Arboretum
+from animals.feed_animals import feed_river_dolphin
 
-def feed_animal(arboretum):
+def feed_animal():
     os.system('cls' if os.name == 'nt' else 'clear')
 
     print("1. Gold Dust Day Gecko")
@@ -13,35 +14,33 @@ def feed_animal(arboretum):
     print("7. Ope'ape'a")
     print("8. Happy-Face Spider")
 
-    choice = input("\nChoose animal to feed. \n>_ ")
-
 def food_menu():
   
     feed_animal()
-    choice = input(">_ ")
+    choice = input("\nChoose animal to feed.\n>_ ")
 
     if choice == "1":
         pass
 
     if choice == "2":
-        RiverDolphin()
+        feed_river_dolphin()
 
-    if choice == "3":
-        feed_animal(keahua)
+    # if choice == "3":
+    #     feed_animal(keahua)
 
-    if choice == "4":
-        pass
+    # if choice == "4":
+    #     pass
 
-    if choice == "5":
-        build_facility_report(keahua)
-        pass
+    # if choice == "5":
+    #     build_facility_report(keahua)
+    #     pass
 
-    if choice != "6":
-        main_menu()
+    # if choice != "6":
+    #     main_menu()
 
-    if choice != "7":
-        main_menu()
+    # if choice != "7":
+    #     main_menu()
 
-    if choice != "8":
-        main_menu()
+    # if choice != "8":
+    #     main_menu()
  
