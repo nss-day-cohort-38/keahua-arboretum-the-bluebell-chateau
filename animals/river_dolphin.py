@@ -16,7 +16,7 @@ class RiverDolphin(Animal, IFreshwater, Identifiable):
 
     def feed(self, prey):
         if prey in self.__prey:
-            print(f'The dolphin ate {prey} for a meal')
+            print(f'\nThe dolphin ate {prey} for a meal')
         else:
             print(f'The dolphin rejects the {prey}')
 
