@@ -26,16 +26,5 @@ def feed_river_dolphin():
         
     if choice == "4":
         dolphin.feed(feeding_time[int(choice) - 1])
-        
-    if choice == "5":
-        dolphin.feed(feeding_time[int(choice) - 1])
 
     choice = input("\nPress any key to go back.\n >_")
-    # if choice == "1":
-    #     river = River()
-    #     arboretum.rivers.append(river)
-    # if choice == "2":
-    #     pass
-
-    # for index, river in enumerate(arboretum.rivers):
-    # print(f'{index + 1}. River {river.id}')
