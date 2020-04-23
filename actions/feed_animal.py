@@ -1,8 +1,8 @@
 import os
 from arboretum import Arboretum
-from .list_of_prey import feed_river_dolphin
-from .list_of_prey import feed_gold_dust_day_gecko
-from .list_of_prey import feed_happy_face_spider
+from actions.list_of_prey import feed_river_dolphin
+from actions.list_of_prey import feed_gold_dust_day_gecko
+from actions.list_of_prey import feed_happy_face_spider
 
 def feed_animal():
     os.system('cls' if os.name == 'nt' else 'clear')
@@ -43,6 +43,6 @@ def food_menu():
     # if choice != "7":
     #     main_menu()
 
-    if choice != "8":
+    if choice == "8":
         feed_happy_face_spider()
  
