@@ -6,6 +6,8 @@ from .list_of_prey import feed_nene_goose
 from .list_of_prey import feed_kikakapu
 from .list_of_prey import feed_pueo
 from .list_of_prey import feed_opeapea
+from actions.list_of_prey import feed_Ulae
+
 
 def feed_animal():
     os.system('cls' if os.name == 'nt' else 'clear')
@@ -39,8 +41,8 @@ def food_menu():
     if choice == "5":
         feed_pueo()
 
-    # if choice != "6":
-    #     main_menu()
+    if choice == "6":
+        feed_Ulae()
 
     if choice == "7":
         feed_opeapea()
