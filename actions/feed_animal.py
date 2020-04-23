@@ -3,6 +3,7 @@ from arboretum import Arboretum
 from actions.list_of_prey import feed_river_dolphin
 from actions.list_of_prey import feed_gold_dust_day_gecko
 from actions.list_of_prey import feed_Ulae
+from actions.list_of_prey import feed_opeapea
 
 def feed_animal():
     os.system('cls' if os.name == 'nt' else 'clear')
@@ -40,8 +41,8 @@ def food_menu():
     if choice == "6":
         feed_Ulae()
 
-    # if choice != "7":
-    #     main_menu()
+    if choice == "7":
+        feed_opeapea()
 
     # if choice != "8":
     #     main_menu()
