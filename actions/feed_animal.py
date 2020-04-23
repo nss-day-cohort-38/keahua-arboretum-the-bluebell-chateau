@@ -6,6 +6,9 @@ from actions.list_of_prey import feed_pueo
 from actions.list_of_prey import feed_happy_face_spider
 from actions.list_of_prey import feed_opeapea
 from actions.list_of_prey import feed_Ulae
+from actions.list_of_prey import feed_nene_goose
+from actions.list_of_prey import feed_kikakapu
+
 
 def feed_animal():
     os.system('cls' if os.name == 'nt' else 'clear')
@@ -30,11 +33,11 @@ def food_menu():
     if choice == "2":
         feed_river_dolphin()
 
-    # if choice == "3":
-    #     feed_animal(keahua)
+    if choice == "3":
+        feed_nene_goose()
 
-    # if choice == "4":
-    #     pass
+    if choice == "4":
+        feed_kikakapu()
 
     if choice == "5":
         feed_pueo()

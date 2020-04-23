@@ -5,4 +5,6 @@ from .opeapea import Opeapea
 from .pueo import Pueo
 from .river_dolphin import RiverDolphin
 from .ulae import Ulae
+from .nene_goose import Nene_Goose
+from .kikakapu import Kikakapu
 
