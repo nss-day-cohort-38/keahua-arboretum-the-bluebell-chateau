@@ -6,6 +6,7 @@ from .walking import IWalking
 from .swimming import ISwimming
 from .saltwater import ISaltwater
 from .identifiable import Identifiable
-from .habitat.contains_animals import IContainsAnimals
-from .habitat.contains_plants import IContainsPlants
+from .biome.contains_animals import IContainsAnimals
+from .biome.contains_plants import IContainsPlants
 from .saltwater import ISaltwater
+from .high_elevation import IHigh_Elevation
