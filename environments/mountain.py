@@ -1,0 +1,30 @@
+from interfaces import Identifiable
+from interfaces import IContainsAnimals
+from interfaces import IContainsPlants
+from interfaces import IHigh_Elevation
+from interfaces import ITerrestrial
+
+
+class Mountain(IContainsAnimals, IContainsPlants,IHigh_Elevation, Identifiable):
+
+    def __init__(self):
+      IContainsAnimals.__init__(self)
+      IContainsPlants.__init__(self)
+      IHigh_Elevation.__init__(self)
+      Identifiable.__init__(self)
+
+    def add_animal(self, animal):
+        try:
+            if animal.terrestrial == True:
+                self.animals.append(animal)
+        except AttributeError:
+            raise AttributeError("Cannot add non-terrestrial animals to a mountain")
+
+    def add_plant(self, plant):
+        try:
+            if plant.high_elevation:
+                self.plants.append(plant)
+        except AttributeError:
+            raise AttributeError("Cannot add plants that require a low-elevation to a mountain biome")
+    def __str__(self):
+        print("mountain object")
