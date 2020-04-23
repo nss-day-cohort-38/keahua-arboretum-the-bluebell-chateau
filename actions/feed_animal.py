@@ -1,6 +1,7 @@
 import os
 from arboretum import Arboretum
-from animals.feed_animals import feed_river_dolphin
+from .list_of_prey import feed_river_dolphin
+from .list_of_prey import feed_gold_dust_day_gecko
 
 def feed_animal():
     os.system('cls' if os.name == 'nt' else 'clear')
@@ -20,7 +21,7 @@ def food_menu():
     choice = input("\nChoose animal to feed.\n>_ ")
 
     if choice == "1":
-        pass
+        feed_gold_dust_day_gecko()
 
     if choice == "2":
         feed_river_dolphin()
