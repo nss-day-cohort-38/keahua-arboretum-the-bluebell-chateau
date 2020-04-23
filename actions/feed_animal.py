@@ -2,6 +2,8 @@ import os
 from arboretum import Arboretum
 from .list_of_prey import feed_river_dolphin
 from .list_of_prey import feed_gold_dust_day_gecko
+from .list_of_prey import feed_nene_goose
+from .list_of_prey import feed_kikakapu
 
 def feed_animal():
     os.system('cls' if os.name == 'nt' else 'clear')
@@ -26,11 +28,11 @@ def food_menu():
     if choice == "2":
         feed_river_dolphin()
 
-    # if choice == "3":
-    #     feed_animal(keahua)
+    if choice == "3":
+        feed_nene_goose()
 
-    # if choice == "4":
-    #     pass
+    if choice == "4":
+        feed_kikakapu()
 
     # if choice == "5":
     #     build_facility_report(keahua)
