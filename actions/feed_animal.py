@@ -1,12 +1,13 @@
 import os
 from arboretum import Arboretum
-from .list_of_prey import feed_river_dolphin
-from .list_of_prey import feed_gold_dust_day_gecko
-from .list_of_prey import feed_nene_goose
-from .list_of_prey import feed_kikakapu
-from .list_of_prey import feed_pueo
-from .list_of_prey import feed_opeapea
+from actions.list_of_prey import feed_gold_dust_day_gecko
+from actions.list_of_prey import feed_river_dolphin
+from actions.list_of_prey import feed_pueo
+from actions.list_of_prey import feed_happy_face_spider
+from actions.list_of_prey import feed_opeapea
 from actions.list_of_prey import feed_Ulae
+from actions.list_of_prey import feed_nene_goose
+from actions.list_of_prey import feed_kikakapu
 
 
 def feed_animal():
@@ -47,6 +48,6 @@ def food_menu():
     if choice == "7":
         feed_opeapea()
 
-    # if choice != "8":
-    #     main_menu()
+    if choice == "8":
+        feed_happy_face_spider()
  
