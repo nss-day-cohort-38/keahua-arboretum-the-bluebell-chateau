@@ -1,10 +1,10 @@
 import os
 from arboretum import Arboretum
-from actions.list_of_prey import feed_river_dolphin
 from actions.list_of_prey import feed_gold_dust_day_gecko
+from actions.list_of_prey import feed_river_dolphin
+from actions.list_of_prey import feed_pueo
 from actions.list_of_prey import feed_happy_face_spider
 from actions.list_of_prey import feed_opeapea
-from actions.list_of_prey import feed_pueo
 
 def feed_animal():
     os.system('cls' if os.name == 'nt' else 'clear')
