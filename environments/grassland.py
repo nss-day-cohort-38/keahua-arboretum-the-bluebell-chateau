@@ -1,7 +1,6 @@
 from interfaces import Identifiable
 from interfaces import IContainsAnimals
 from interfaces import IContainsPlants
-from interfaces import IHigh_Elevation
 from interfaces import ITerrestrial
 
 
