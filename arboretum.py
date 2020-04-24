@@ -8,6 +8,8 @@ class Arboretum:
         self.mountains = []
         self.swamps = []
         self.forests = []
+        
+        # convert to a dictionary in order to loop through values
 
 # class Arboretum:
 
