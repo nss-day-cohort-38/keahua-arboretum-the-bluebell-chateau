@@ -7,21 +7,39 @@ from environments import Coastline
 
 def build_facility_report(arboretum):
     for river in arboretum.rivers:
-        print(f'River [{river.id}]')
+        river_id = str(river.id)
+        river_list = list(river_id)
+        sliced_river = river_list[:8]
+        print(f'River [{"".join(sliced_river)}]')
 
     for mountain in arboretum.mountains:
-        print(f'Mountain [{mountain.id}]')
+        mountain_id = str(mountain.id)
+        mountain_list = list(mountain_id)
+        sliced_mountain = mountain_list[:8]
+        print(f'Mountain [{"".join(sliced_mountain)}]')
     
     for grassland in arboretum.grasslands:
-        print(f'Grassland [{grassland.id}]')
+        grassland_id = str(grassland.id)
+        grassland_list = list(grassland_id)
+        sliced_grassland = grassland_list[:8]
+        print(f'Grassland [{"".join(sliced_grassland)}]')
 
     for forest in arboretum.forests:
-        print(f'Forest [{forest.id}]')
+        forest_id = str(forest.id)
+        forest_list = list(forest_id)
+        sliced_forest = forest_list[:8]
+        print(f'Forest [{"".join(sliced_forest)}]')
 
     for swamp in arboretum.swamps:
-        print(f'Swamp [{swamp.id}]')
+        swamp_id = str(swamp.id)
+        swamp_list = list(swamp_id)
+        sliced_swamp = swamp_list[:8]
+        print(f'Swamp [{"".join(sliced_swamp)}]')
 
     for coastline in arboretum.coastlines:
-        print(f'Coastline [{coastline.id}]')
+        coastline_id = str(coastline.id)
+        coastline_list = list(coastline_id)
+        sliced_coastline = coastline_list[:8]
+        print(f'Coastline [{"".join(sliced_coastline)}]')
 
     input("\n\nPress any key to continue...")
