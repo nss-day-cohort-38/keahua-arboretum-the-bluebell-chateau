@@ -3,6 +3,7 @@ from environments import Mountain
 from environments import Grassland
 from environments import Forest
 from environments import Swamp
+from environments import Coastline
 
 def build_facility_report(arboretum):
     for river in arboretum.rivers:
@@ -19,5 +20,8 @@ def build_facility_report(arboretum):
 
     for swamp in arboretum.swamps:
         print(f'Swamp [{swamp.id}]')
+
+    for coastline in arboretum.coastlines:
+        print(f'Coastline [{coastline.id}]')
 
     input("\n\nPress any key to continue...")

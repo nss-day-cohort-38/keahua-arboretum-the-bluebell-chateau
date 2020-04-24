@@ -4,6 +4,7 @@ from environments import Mountain
 from environments import Swamp
 from environments import Grassland
 from environments import Forest
+from environments import Coastline
 
 def annex_biome(arboretum):
     os.system('cls' if os.name == 'nt' else 'clear')
