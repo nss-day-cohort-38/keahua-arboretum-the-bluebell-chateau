@@ -1,5 +1,7 @@
 from animals import RiverDolphin
 import os
+from animals import Gecko, Nene_Goose, Kikakapu, Pueo, Ulae, Opeapea, HappyFaceSpider
+from arboretum import Arboretum
 
 def release_animal(arboretum):
     animal = None
@@ -17,18 +19,54 @@ def release_animal(arboretum):
     choice = input("\nChoose animal. \n>_ ")
 
     if choice == "1":
-        animal = RiverDolphin()
+        animal = Gecko()
 
     if choice == "2":
-        pass
+        animal = RiverDolphin()
+
+    if choice == "3":
+        animal = Nene_Goose()
+
+    if choice == "4":
+        animal = Kikakapu()
+
+    if choice == "5":
+         animal = Pueo()
+
+    if choice == "6":
+        animal = Ulae()
+
+    if choice == "7":
+        animal = Opeapea()
+
+    if choice == "8":
+        animal = HappyFaceSpider()
 
 
     for index, river in enumerate(arboretum.rivers):
         print(f'{index + 1}. River {river.id}')
 
-    print("Release the animal into which biome?")
-    choice = input("> ")
+    # print("Release the animal into which biome?\n")
+    # print("1. Mountain")
+    # print("2. Swamp")
+    # print("3. Grassland")
+    # print("4. Forest")
+    # print("5. River")
+    # print("6. Coastline")
+
+    choice = input("\n> ")
 
     arboretum.rivers[int(choice) - 1].animals.append(animal)
+
+    arboretum.mountain[int(choice) - 1].animals.append(animal)
+
+    arboretum.swamp[int(choice) - 1].animals.append(animal)
+
+    arboretum.grassland[int(choice) - 1].animals.append(animal)
+
+    arboretum.forest[int(choice) - 1].animals.append(animal)
+
+    arboretum.coastline[int(choice) - 1].animals.append(animal)
+
 
 
