@@ -3,7 +3,17 @@ import os
 from environments import River
 from animals import Gecko, Nene_Goose, Kikakapu, Pueo, Ulae, Opeapea, HappyFaceSpider
 
+# So it seems like what #2 should do is render the biomes that will take
+# the animals depending on what animal is selected. The graph in README 
+# shows eligible biomes for each animal. 
 
+# And each biome should have animals array. So if animal is selected, print
+# the eligible biome names, as well as the length of the animals arr for
+# those biomes!
+
+# Then a new input for which biome to append/add the animal choice to,
+# with a nested if for when the len() of that arr is maxed out, print a 
+# message with another input for a new choice.
 def release_animal(arboretum):
     animal = None
     os.system('cls' if os.name == 'nt' else 'clear')
