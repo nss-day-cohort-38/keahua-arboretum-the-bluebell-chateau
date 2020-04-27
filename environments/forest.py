@@ -21,5 +21,9 @@ class Forest(IContainsAnimals, IContainsPlants, Identifiable):
             self.plants.append(plant)
         except AttributeError:
             raise AttributeError("Error!")
+
     def __str__(self):
-        print("forest object")
+        return(f"Forest [{str(self.id)[:8]}]")
+
+    
+        # print(type(self.id))
