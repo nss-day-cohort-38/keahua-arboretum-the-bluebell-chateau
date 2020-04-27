@@ -29,9 +29,14 @@ def main_menu():
     build_menu()
     choice = input(">_ ")
 
+    # Will print a menu of biomes with conditionals to add the selected
+    # biome to keahua's array for that biome.
     if choice == "1":
         annex_biome(keahua)
 
+    # Will print list of animals to release to a biome. Conditionals based
+    # on animal selected to print the biomes for that animal, and the len()
+    # of the animals arr for those biomes to make sure there's room.
     if choice == "2":
         release_animal(keahua)
 
