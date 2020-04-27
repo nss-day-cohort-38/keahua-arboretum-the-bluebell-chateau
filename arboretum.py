@@ -9,11 +9,23 @@ class Arboretum:
         self.swamps = []
         self.forests = []
 
-    def annex_forest(self, forest):
-        self.forests.append(forest)
-
     def annex_river(self, river):
         self.rivers.append(river)
+    
+    def annex_grasslands(self, grassland):
+        self.grasslands.append(grassland)
+    
+    def annex_coastlines(self, grassland):
+        self.grasslands.append(grassland)
+    
+    def annex_mountains(self, grassland):
+        self.grasslands.append(grassland)
+    
+    def annex_grasslands(self, grassland):
+        self.grasslands.append(grassland)
+    
+    def annex_forest(self, forest):
+        self.forests.append(forest)
         
         # convert to a dictionary in order to loop through values
 

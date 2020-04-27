@@ -76,7 +76,10 @@ def release_animal(arboretum):
 
         if biome_choice == "1":
             grassland.add_animal(animal)
+            arboretum.annex_grasslands(grassland)
+            
             print(f"\nGrassland ({len(grassland.animals)} animals)")
+            input("\nPress any key to return to the main menu \n>_")
 
     if choice == "4":
         animal = Kikakapu()
