@@ -39,6 +39,7 @@ def release_animal(arboretum):
 
         if biome_choice == "1":
             forest.add_animal(animal)
+            arboretum.annex_forest(forest)
             # TODO: Figure out why it's jumping back to main menu before
             # printing updated animals arr length
             print(f"\nForest ({len(forest.animals)} animals)")
@@ -57,6 +58,8 @@ def release_animal(arboretum):
 
         if biome_choice == "1":
             river.add_animal(animal)
+            arboretum.annex_river(river)
+
             print(f"\nRiver ({len(river.animals)} animals)")
 
         elif biome_choice == "2":
