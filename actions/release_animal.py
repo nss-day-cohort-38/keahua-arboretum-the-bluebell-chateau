@@ -14,8 +14,16 @@ from animals import Gecko, Nene_Goose, Kikakapu, Pueo, Ulae, Opeapea, HappyFaceS
 # Then a new input for which biome to append/add the animal choice to,
 # with a nested if for when the len() of that arr is maxed out, print a 
 # message with another input for a new choice.
+forest = Forest()
+river = River()
+coastline = Coastline()
+mountain = Mountain()
+swamp = Swamp()
+grassland = Grassland()
+
 def release_animal(arboretum):
     animal = None
+
     os.system('cls' if os.name == 'nt' else 'clear')
 
     print("1. Gold Dust Day Gecko")
@@ -29,9 +37,11 @@ def release_animal(arboretum):
 
     choice = input("\nChoose animal. \n>_ ")
 
+
+
     if choice == "1":
         animal = Gecko()
-        forest = Forest()
+        # forest = Forest()
 
         print(f"\n1. Forest ({len(forest.animals)} animals)")
 
@@ -39,15 +49,17 @@ def release_animal(arboretum):
 
         if biome_choice == "1":
             forest.add_animal(animal)
-            arboretum.annex_forest(forest)
+            arboretum.annex_forests(forest)
             # TODO: Figure out why it's jumping back to main menu before
             # printing updated animals arr length
             print(f"\nForest ({len(forest.animals)} animals)")
+            input("\nPress any key to return to the main menu \n>_")
+
 
     if choice == "2":
         animal = RiverDolphin()
-        river = River()
-        coastline = Coastline()
+        # river = River()
+        # coastline = Coastline()
 
         print(f"\n1. River ({len(river.animals)} animals)")
         print(f"2. Coastline ({len(coastline.animals)} animals)")
@@ -58,17 +70,21 @@ def release_animal(arboretum):
 
         if biome_choice == "1":
             river.add_animal(animal)
-            arboretum.annex_river(river)
+            arboretum.annex_rivers(river)
 
             print(f"\nRiver ({len(river.animals)} animals)")
+            input("\nPress any key to return to the main menu \n>_")
 
         elif biome_choice == "2":
             coastline.add_animal(animal)
+            arboretum.annex_coastlines(coastline)
             print(f"Coastline ({len(coastline.animals)} animals)")
+            input("\nPress any key to return to the main menu \n>_")
+
 
     if choice == "3":
         animal = Nene_Goose()
-        grassland = Grassland()
+        # grassland = Grassland()
 
         print(f"\n1. Grassland ({len(grassland.animals)} animals)")
 
@@ -83,8 +99,8 @@ def release_animal(arboretum):
 
     if choice == "4":
         animal = Kikakapu()
-        river = River()
-        swamp = Swamp()
+        # river = River()
+        # swamp = Swamp()
 
         print(f"\n1. River ({len(river.animals)} animals)")
         print(f"2. Swamp ({len(swamp.animals)} animals)")
@@ -93,16 +109,21 @@ def release_animal(arboretum):
 
         if biome_choice == "1":
             river.add_animal(animal)
+            arboretum.annex_rivers(river)
             print(f"\nRiver ({len(river.animals)} animals)")
+            input("\nPress any key to return to the main menu \n>_")
 
         elif biome_choice == "2":
             swamp.add_animal(animal)
+            arboretum.annex_swamps(swamp)
             print(f"Swamp ({len(swamp.animals)} animals)")
+            input("\nPress any key to return to the main menu \n>_")
+
 
     if choice == "5":
         animal = Pueo()
-        grassland = Grassland()
-        forest = Forest()
+        # grassland = Grassland()
+        # forest = Forest()
 
         print(f"\n1. Grassland ({len(grassland.animals)} animals)")
         print(f"2. Forest ({len(forest.animals)} animals)")
@@ -111,15 +132,20 @@ def release_animal(arboretum):
 
         if biome_choice == "1":
             grassland.add_animal(animal)
-            print(f"\nGrassland ({len(grassland.animals)} animals)")
+            arboretum.annex_grasslands(grassland)
+            print(f"\nGrassland ({len(grassland.animals)} animals)")            
+            input("\nPress any key to return to the main menu \n>_")
+
 
         elif biome_choice == "2":
             forest.add_animal(animal)
+            arboretum.annex_forests(forest)
             print(f"Forest ({len(forest.animals)} animals)")
+            input("\nPress any key to return to the main menu \n>_")
 
     if choice == "6":
         animal = Ulae()
-        coastline = Coastline()
+        # coastline = Coastline()
 
         print(f"\n1. Coastline ({len(coastline.animals)} animals)")
 
@@ -127,12 +153,14 @@ def release_animal(arboretum):
 
         if biome_choice == "1":
             coastline.add_animal(animal)
+            arboretum.annex_coastlines(coastline)
             print(f"\nCoastline ({len(coastline.animals)} animals)")
+            input("\nPress any key to return to the main menu \n>_")
 
     if choice == "7":
         animal = Opeapea()
-        mountain = Mountain()
-        forest = Forest()
+        # mountain = Mountain()
+        # forest = Forest()
 
         print(f"\n1. Mountain ({len(mountain.animals)} animals)")
         print(f"2. Forest ({len(forest.animals)} animals)")
@@ -141,15 +169,19 @@ def release_animal(arboretum):
 
         if biome_choice == "1":
             mountain.add_animal(animal)
+            arboretum.annex_mountains(mountain)
             print(f"\nMountain ({len(mountain.animals)} animals)")
+            input("\nPress any key to return to the main menu \n>_")
 
         elif biome_choice == "2":
             forest.add_animal(animal)
+            arboretum.annex_forests(forest)
             print(f"Forest ({len(forest.animals)} animals)")
+            input("\nPress any key to return to the main menu \n>_")
 
     if choice == "8":
         animal = HappyFaceSpider()
-        swamp = Swamp()
+        # swamp = Swamp()
 
         print(f"\n1. Swamp ({len(swamp.animals)} animals)")
 
@@ -157,7 +189,9 @@ def release_animal(arboretum):
 
         if biome_choice == "1":
             swamp.add_animal(animal)
+            arboretum.annex_swamps(swamp)
             print(f"Swamp ({len(swamp.animals)} animals)")
+            input("\nPress any key to return to the main menu \n>_")
 
 
 
