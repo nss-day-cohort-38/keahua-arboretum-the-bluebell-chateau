@@ -21,6 +21,19 @@ class Swamp(IContainsAnimals, IContainsPlants, Identifiable):
     def animal_count(self):
         return "This place has a bunch of animals in it"
 
+    def add_animal(self, animal):
+        try:
+          self.animals.append(animal)
+        except AttributeError:
+            raise AttributeError("Error!")
+
+    def add_plant(self, plant):
+        try:
+          self.plants.append(plant)
+        except AttributeError:
+            raise AttributeError("Error!")
+    def __str__(self):
+        print("swamp object")
     # def addInhabitant(self, item):
     #     if not isinstance(item, IStagnant):
     #         raise TypeError(f"{item} is not of type IStagnant")
