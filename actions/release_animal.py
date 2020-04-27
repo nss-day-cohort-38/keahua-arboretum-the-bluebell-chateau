@@ -14,12 +14,6 @@ from animals import Gecko, Nene_Goose, Kikakapu, Pueo, Ulae, Opeapea, HappyFaceS
 # Then a new input for which biome to append/add the animal choice to,
 # with a nested if for when the len() of that arr is maxed out, print a 
 # message with another input for a new choice.
-# forest = Forest()
-# river = River()
-# coastline = Coastline()
-# mountain = Mountain()
-# swamp = Swamp()
-# grassland = Grassland()
 
 def release_animal(arboretum):
     animal = None
@@ -183,23 +177,15 @@ def release_animal(arboretum):
     if choice == "8":
         animal = HappyFaceSpider()
         # swamp = Swamp()
-
-        print(f"\n1. Swamp ({len(swamp.animals)} animals)")
+        for index, swamp in enumerate(arboretum.swamps):
+            print(f"\n {index + 1}. {swamp} ({len(swamp.animals)} animals)")
 
         biome_choice = input(f"\nChoose which biome to release the {animal.species}.\n>_ ")
 
-        if biome_choice == "1":
-            swamp.add_animal(animal)
-            arboretum.annex_swamps(swamp)
-            print(f"Swamp ({len(swamp.animals)} animals)")
+        if biome_choice == "1" and len(arboretum.swamps[0].animals) < 3:
+
+            arboretum.swamps[0].add_animal(animal)
             input("\nPress any key to return to the main menu \n>_")
-
-
-
-
-
-
-
 
 # choice = input("\nChoose which biome to release the animal.\n>_ ")
 
