@@ -5,3 +5,6 @@ class Identifiable:
 
     def __init__(self):
       self.id = uuid1()
+
+    # def __str__(self):
+    #   return(f"{self.id}")
