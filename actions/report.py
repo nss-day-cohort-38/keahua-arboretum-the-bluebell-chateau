@@ -36,7 +36,15 @@ def build_facility_report(arboretum):
         grassland_id = str(grassland.id)
         grassland_list = list(grassland_id)
         sliced_grassland = grassland_list[:8]
+        grassland_animals = grassland.animal
         print(f'Grassland [{"".join(sliced_grassland)}]')
+        
+        for animal in grassland_animals:
+            animal_id = str(animal.id)
+            animal_id_list = list(animal_id)
+            sliced_animal_id = animal_id_list[:8]
+            print(f'\t{animal.species} ({"".join(sliced_animal_id)})')
+
 
     for forest in arboretum.forests:
         forest_id = str(forest.id)
