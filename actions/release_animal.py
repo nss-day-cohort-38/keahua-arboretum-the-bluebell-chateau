@@ -14,12 +14,6 @@ from animals import Gecko, Nene_Goose, Kikakapu, Pueo, Ulae, Opeapea, HappyFaceS
 # Then a new input for which biome to append/add the animal choice to,
 # with a nested if for when the len() of that arr is maxed out, print a 
 # message with another input for a new choice.
-# forest = Forest()
-# river = River()
-# coastline = Coastline()
-# mountain = Mountain()
-# swamp = Swamp()
-# grassland = Grassland()
 
 def release_animal(arboretum):
     animal = None
@@ -123,25 +117,18 @@ def release_animal(arboretum):
 
     if choice == "5":
         animal = Pueo()
-        # grassland = Grassland()
-        # forest = Forest()
 
-        print(f"\n1. Grassland ({len(grassland.animals)} animals)")
-        print(f"2. Forest ({len(forest.animals)} animals)")
+        for index, forest in enumerate(arboretum.forests): 
+            print(f"\n {index + 1}. {forest} ({len(forest.animals)} animals)")
+
+        # for index, grassland in enumerate(arboretum.grasslands): 
+        #     print(f"\n {index + 1}. {grassland} ({len(grassland.animals)} animals)")
 
         biome_choice = input(f"\nChoose which biome to release the {animal.species}.\n>_ ")
 
-        if biome_choice == "1":
-            grassland.add_animal(animal)
-            arboretum.annex_grasslands(grassland)
-            print(f"\nGrassland ({len(grassland.animals)} animals)")            
-            input("\nPress any key to return to the main menu \n>_")
 
-
-        elif biome_choice == "2":
-            forest.add_animal(animal)
-            arboretum.annex_forests(forest)
-            print(f"Forest ({len(forest.animals)} animals)")
+        if biome_choice == "1" and len(arboretum.forests[0].animals) < 20:
+            arboretum.forests[0].add_animal(animal)
             input("\nPress any key to return to the main menu \n>_")
 
     if choice == "6":
