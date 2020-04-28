@@ -28,7 +28,14 @@ def build_facility_report(arboretum):
         forest_id = str(forest.id)
         forest_list = list(forest_id)
         sliced_forest = forest_list[:8]
-        print(f'Forest [{"".join(sliced_forest)}]')
+        forest_animals = forest.animals
+        print(f'\nForest [{"".join(sliced_forest)}]')
+
+        for animal in forest_animals:
+            animal_id = str(animal.id)
+            animal_id_list = list(animal_id)
+            sliced_animal_id = animal_id_list[:8]
+            print(f'\t{animal.species} ({"".join(sliced_animal_id)})')
 
     for swamp in arboretum.swamps:
         swamp_id = str(swamp.id)
