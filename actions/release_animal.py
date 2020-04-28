@@ -4,16 +4,17 @@ from environments import River, Grassland, Forest, Coastline, Swamp, Mountain
 from animals import Gecko, Nene_Goose, Kikakapu, Pueo, Ulae, Opeapea, HappyFaceSpider
 
 # So it seems like what #2 should do is render the biomes that will take
-# the animals depending on what animal is selected. The graph in README 
-# shows eligible biomes for each animal. 
+# the animals depending on what animal is selected. The graph in README
+# shows eligible biomes for each animal.
 
 # And each biome should have animals array. So if animal is selected, print
 # the eligible biome names, as well as the length of the animals arr for
 # those biomes!
 
 # Then a new input for which biome to append/add the animal choice to,
-# with a nested if for when the len() of that arr is maxed out, print a 
+# with a nested if for when the len() of that arr is maxed out, print a
 # message with another input for a new choice.
+
 
 def release_animal(arboretum):
     animal = None
@@ -31,35 +32,36 @@ def release_animal(arboretum):
 
     choice = input("\nChoose animal. \n>_ ")
 
-
-
     if choice == "1":
         animal = Gecko()
-        for index, forest in enumerate(arboretum.forests): 
+
+        for index, forest in enumerate(arboretum.forests):
             print(f"\n {index + 1}. {forest} ({len(forest.animals)} animals)")
 
-        biome_choice = input(f"\nChoose which biome to release the {animal.species}.\n>_ ")
-
+        biome_choice = input(
+            f"\nChoose which biome to release the {animal.species}.\n>_ ")
 
         if biome_choice == "1" and len(arboretum.forests[0].animals) < 20:
 
             arboretum.forests[0].add_animal(animal)
             input("\nPress any key to return to the main menu \n>_")
 
+        if biome_choice == "2" and len(arboretum.forests[1].animals) < 20:
 
-    if choice == "2":
-        animal = RiverDolphin()
+            arboretum.forests[1].add_animal(animal)
 
-        biome_choice = input(f"\nChoose which biome to release the {animal.species}.\n>_ ")
+            input("\nPress any key to return to the main menu \n>_")
 
+        if biome_choice == "3" and len(arboretum.forests[2].animals) < 20:
 
-    if choice == "3":
-        animal = Nene_Goose()
+            if choice == "3":
+                animal = Nene_Goose()
          
         for index, grassland in enumerate(arboretum.grasslands):
             print(f"\n {index + 1}. {grassland} ({len(grassland.animals)} animals)")
+            arboretum.forests[2].add_animal(animal)
 
-        biome_choice = input(f"\nChoose which biome to release the {animal.species}.\n>_ ")
+            input("\nPress any key to return to the main menu \n>_")
 
         if biome_choice == "1" and len(arboretum.grasslands[0].animals) < 21:
             arboretum.grasslands[0].add_animal(animal)
@@ -75,6 +77,39 @@ def release_animal(arboretum):
 
         if biome_choice == "1" and len(arboretum.swamps[0].animals) < 21:
             arboretum.swamps[0].add_animal(animal)
+        if biome_choice == "4" and len(arboretum.forests[3].animals) < 20:
+
+            arboretum.forests[3].add_animal(animal)
+
+            input("\nPress any key to return to the main menu \n>_")
+
+    if choice == "2":
+        animal = RiverDolphin()
+
+        for index, river in enumerate(arboretum.rivers):
+            print(f"{index + 1}. {river} ({len(river.animals)} animals)")
+            
+        biome_choice = input(
+            f"\nChoose which biome to release the {animal.species}.\n>_ ")
+
+        if biome_choice == "1" and len(arboretum.rivers[0].animals) < 12:
+            
+            arboretum.rivers[0].add_animal(animal)
+            input("\nPress any key to return to the main menu \n>_")
+            
+        if biome_choice == "2" and len(arboretum.rivers[1].animals) < 12:
+
+            arboretum.rivers[1].add_animal(animal)
+            input("\nPress any key to return to the main menu \n>_")
+            
+        if biome_choice == "3" and len(arboretum.rivers[2].animals) < 12:
+
+            arboretum.rivers[2].add_animal(animal)
+            input("\nPress any key to return to the main menu \n>_")
+            
+        if biome_choice == "4" and len(arboretum.rivers[3].animals) < 12:
+
+            arboretum.rivers[3].add_animal(animal)
             input("\nPress any key to return to the main menu \n>_")
 
     if choice == "5":
@@ -82,9 +117,6 @@ def release_animal(arboretum):
 
         for index, forest in enumerate(arboretum.forests): 
             print(f"\n {index + 1}. {forest} ({len(forest.animals)} animals)")
-
-        # for index, grassland in enumerate(arboretum.grasslands): 
-        #     print(f"\n {index + 1}. {grassland} ({len(grassland.animals)} animals)")
 
         biome_choice = input(f"\nChoose which biome to release the {animal.species}.\n>_ ")
 
@@ -96,49 +128,49 @@ def release_animal(arboretum):
     if choice == "6":
         animal = Ulae()
 
-        biome_choice = input(f"\nChoose which biome to release the {animal.species}.\n>_ ")
+        biome_choice = input(
+            f"\nChoose which biome to release the {animal.species}.\n>_ ")
 
     if choice == "7":
         animal = Opeapea()
 
-        biome_choice = input(f"\nChoose which biome to release the {animal.species}.\n>_ ")
+        biome_choice = input(
+            f"\nChoose which biome to release the {animal.species}.\n>_ ")
 
     if choice == "8":
         animal = HappyFaceSpider()
 
-        biome_choice = input(f"\nChoose which biome to release the {animal.species}.\n>_ ")
-
+        biome_choice = input(
+            f"\nChoose which biome to release the {animal.species}.\n>_ ")
 
 
 
 # choice = input("\nChoose which biome to release the animal.\n>_ ")
 
     # def release_into_biome():
-    # create list of biomes. loop through list to check if that biome is in the list. 
+    # create list of biomes. loop through list to check if that biome is in the list.
     # for environment in dir(aboretum):
     # if environment in biome_list:
     # for environment_instance in arboretum[environment]:
     # print(evironment_instance)
 
     # biome_list = ["Coastlines", "Rivers", "Forests", "Mountains", "Swamps", "Grasslands"]
-    
+
     # biomes = []
-    
+
     # for river in arboretum.rivers:
     #     biomes.append(river)
-    
+
     # for environment in biome_list:
-    #     if environment in dir(arboretum):
+    #     if environment in arboretum:
     #         for index, biome in enumerate(biome_list):
     #             print(f"{index + 1}. {biome}")
             # river_list = arboretum.rivers
             # for index, river in enumerate(river_list):
             #     print(f'{index + 1}. River {river.id}')
             #     print(environment)
-                
-    # choice = input("\nChoose which biome to release the animal.\n>_ ")
 
-    
+    # choice = input("\nChoose which biome to release the animal.\n>_ ")
 
     # if choice == "5":
         # sorted_rivers.append(animal)
@@ -155,4 +187,3 @@ def release_animal(arboretum):
     # arboretum.forest[int(choice) - 1].animals.append(animal)
 
     # arboretum.coastline[int(choice) - 1].animals.append(animal)
-
