@@ -27,4 +27,4 @@ class Mountain(IContainsAnimals, IContainsPlants,IHigh_Elevation, Identifiable):
         except AttributeError:
             raise AttributeError("Cannot add plants that require a low-elevation to a mountain biome")
     def __str__(self):
-        print("mountain object")
+        return(f"Mountain [{str(self.id)[:8]}]")

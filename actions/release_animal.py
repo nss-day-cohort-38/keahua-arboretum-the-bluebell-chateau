@@ -122,19 +122,74 @@ def release_animal(arboretum):
 
     if choice == "7":
         animal = Opeapea()
+        # mountain = Mountain()
+        # forest = Forest()
+        for index, mountain in enumerate(arboretum.mountains):
+            print(f"\n {index + 1}. {mountain} ({len(mountain.animals)} animals)")
 
         biome_choice = input(
             f"\nChoose which biome to release the {animal.species}.\n>_ ")
+
+        if biome_choice == "1" and len(arboretum.mountains[0].animals) < 6:
+
+            arboretum.mountains[0].add_animal(animal)
+            input("\nPress any key to return to the main menu \n>_")
+
+        if biome_choice == "2" and len(arboretum.mountains[1].animals) < 6:
+
+            arboretum.mountains[1].add_animal(animal)
+            input("\nPress any key to return to the main menu \n>_")
+
+        if biome_choice == "3" and len(arboretum.mountains[2].animals) < 6:
+
+            arboretum.mountains[2].add_animal(animal)
+            input("\nPress any key to return to the main menu \n>_")
+
+        if biome_choice == "4" and len(arboretum.mountains[3].animals) < 6:
+
+            arboretum.mountains[3].add_animal(animal)
+            input("\nPress any key to return to the main menu \n>_")
+
+        if biome_choice == "5" and len(arboretum.mountains[4].animals) < 6:
+
+            arboretum.mountains[4].add_animal(animal)
+            input("\nPress any key to return to the main menu \n>_")
 
     if choice == "8":
         animal = HappyFaceSpider()
+        # swamp = Swamp()
+        for index, swamp in enumerate(arboretum.swamps):
+            print(f"\n {index + 1}. {swamp} ({len(swamp.animals)} animals)")
 
-        biome_choice = input(
-            f"\nChoose which biome to release the {animal.species}.\n>_ ")
+        biome_choice = input(f"\nChoose which biome to release the {animal.species}.\n>_ ")
 
+        if biome_choice == "1" and len(arboretum.swamps[0].animals) < 8:
 
+            arboretum.swamps[0].add_animal(animal)
+            input("\nPress any key to return to the main menu \n>_")
 
-# choice = input("\nChoose which biome to release the animal.\n>_ ")
+        if biome_choice == "2" and len(arboretum.swamps[1].animals) < 8:
+
+            arboretum.swamps[1].add_animal(animal)
+            input("\nPress any key to return to the main menu \n>_")
+
+        if biome_choice == "3" and len(arboretum.swamps[2].animals) < 8:
+
+            arboretum.swamps[2].add_animal(animal)
+            input("\nPress any key to return to the main menu \n>_")
+
+        if biome_choice == "4" and len(arboretum.swamps[3].animals) < 8:
+
+            arboretum.swamps[3].add_animal(animal)
+            input("\nPress any key to return to the main menu \n>_")
+
+        if biome_choice == "5" and len(arboretum.swamps[4].animals) < 8:
+
+            arboretum.swamps[4].add_animal(animal)
+            input("\nPress any key to return to the main menu \n>_")
+       
+
+        # choice = input("\nChoose which biome to release the animal.\n>_ ")
 
     # def release_into_biome():
     # create list of biomes. loop through list to check if that biome is in the list.
