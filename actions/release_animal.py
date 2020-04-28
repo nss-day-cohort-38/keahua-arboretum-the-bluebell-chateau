@@ -149,22 +149,14 @@ def release_animal(arboretum):
         animal = Opeapea()
         # mountain = Mountain()
         # forest = Forest()
-
-        print(f"\n1. Mountain ({len(mountain.animals)} animals)")
-        print(f"2. Forest ({len(forest.animals)} animals)")
+        for index, mountain in enumerate(arboretum.mountains):
+            print(f"\n {index + 1}. {mountain} ({len(mountain.animals)} animals)")
 
         biome_choice = input(f"\nChoose which biome to release the {animal.species}.\n>_ ")
 
-        if biome_choice == "1":
-            mountain.add_animal(animal)
-            arboretum.annex_mountains(mountain)
-            print(f"\nMountain ({len(mountain.animals)} animals)")
-            input("\nPress any key to return to the main menu \n>_")
+        if biome_choice == "1" and len(arboretum.mountains[0].animals) < 5:
 
-        elif biome_choice == "2":
-            forest.add_animal(animal)
-            arboretum.annex_forests(forest)
-            print(f"Forest ({len(forest.animals)} animals)")
+            arboretum.mountains[0].add_animal(animal)
             input("\nPress any key to return to the main menu \n>_")
 
     if choice == "8":
