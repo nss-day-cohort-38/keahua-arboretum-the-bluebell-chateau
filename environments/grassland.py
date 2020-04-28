@@ -24,4 +24,4 @@ class Grassland(IContainsAnimals, IContainsPlants, Identifiable):
             raise AttributeError("Error!")
     
     def __str__(self):
-        return print(f"Grassland [{str(self.id)[:8]}]")
+        return(f"Grassland [{str(self.id)[:22]}]")

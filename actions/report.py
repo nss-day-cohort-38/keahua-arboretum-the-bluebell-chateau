@@ -36,7 +36,7 @@ def build_facility_report(arboretum):
         grassland_id = str(grassland.id)
         grassland_list = list(grassland_id)
         sliced_grassland = grassland_list[:8]
-        grassland_animals = grassland.animal
+        grassland_animals = grassland.animals
         print(f'Grassland [{"".join(sliced_grassland)}]')
         
         for animal in grassland_animals:
