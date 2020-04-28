@@ -94,7 +94,7 @@ def release_animal(arboretum):
 
         biome_choice = input(f"\nChoose which biome to release the {animal.species}.\n>_ ")
 
-        if biome_choice == "1" and len(arboretum.mountains[0].animals) < 5:
+        if biome_choice == "1" and len(arboretum.mountains[0].animals) < 6:
 
             arboretum.mountains[0].add_animal(animal)
             input("\nPress any key to return to the main menu \n>_")
@@ -107,7 +107,7 @@ def release_animal(arboretum):
 
         biome_choice = input(f"\nChoose which biome to release the {animal.species}.\n>_ ")
 
-        if biome_choice == "1" and len(arboretum.swamps[0].animals) < 3:
+        if biome_choice == "1" and len(arboretum.swamps[0].animals) < 8:
 
             arboretum.swamps[0].add_animal(animal)
             input("\nPress any key to return to the main menu \n>_")
