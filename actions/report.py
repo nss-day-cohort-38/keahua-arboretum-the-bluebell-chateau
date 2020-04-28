@@ -10,7 +10,14 @@ def build_facility_report(arboretum):
         river_id = str(river.id)
         river_list = list(river_id)
         sliced_river = river_list[:8]
+        river_animals = river.animals
         print(f'River [{"".join(sliced_river)}]')
+        
+        for animal in river_animals:
+            animal_id = str(animal.id)
+            animal_id_list = list(animal_id)
+            sliced_animal_id = animal_id_list[:8]
+            print(f'\t{animal.species} ({"".join(sliced_animal_id)})')
 
     for mountain in arboretum.mountains:
         mountain_id = str(mountain.id)

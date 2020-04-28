@@ -74,7 +74,7 @@ def release_animal(arboretum):
             f"\nChoose which biome to release the {animal.species}.\n>_ ")
 
         if biome_choice == "1" and len(arboretum.rivers[0].animals) < 12:
-
+            
             arboretum.rivers[0].add_animal(animal)
             input("\nPress any key to return to the main menu \n>_")
             
@@ -108,56 +108,22 @@ def release_animal(arboretum):
 
     if choice == "6":
         animal = Ulae()
-        # coastline = Coastline()
-
-        print(f"\n1. Coastline ({len(coastline.animals)} animals)")
 
         biome_choice = input(
             f"\nChoose which biome to release the {animal.species}.\n>_ ")
-
-        if biome_choice == "1":
-            coastline.add_animal(animal)
-            arboretum.annex_coastlines(coastline)
-            print(f"\nCoastline ({len(coastline.animals)} animals)")
-            input("\nPress any key to return to the main menu \n>_")
 
     if choice == "7":
         animal = Opeapea()
-        # mountain = Mountain()
-        # forest = Forest()
-
-        print(f"\n1. Mountain ({len(mountain.animals)} animals)")
-        print(f"2. Forest ({len(forest.animals)} animals)")
 
         biome_choice = input(
             f"\nChoose which biome to release the {animal.species}.\n>_ ")
-
-        if biome_choice == "1":
-            mountain.add_animal(animal)
-            arboretum.annex_mountains(mountain)
-            print(f"\nMountain ({len(mountain.animals)} animals)")
-            input("\nPress any key to return to the main menu \n>_")
-
-        elif biome_choice == "2":
-            forest.add_animal(animal)
-            arboretum.annex_forests(forest)
-            print(f"Forest ({len(forest.animals)} animals)")
-            input("\nPress any key to return to the main menu \n>_")
 
     if choice == "8":
         animal = HappyFaceSpider()
-        # swamp = Swamp()
-
-        print(f"\n1. Swamp ({len(swamp.animals)} animals)")
 
         biome_choice = input(
             f"\nChoose which biome to release the {animal.species}.\n>_ ")
 
-        if biome_choice == "1":
-            swamp.add_animal(animal)
-            arboretum.annex_swamps(swamp)
-            print(f"Swamp ({len(swamp.animals)} animals)")
-            input("\nPress any key to return to the main menu \n>_")
 
 
 # choice = input("\nChoose which biome to release the animal.\n>_ ")
