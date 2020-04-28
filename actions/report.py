@@ -68,6 +68,13 @@ def build_facility_report(arboretum):
         coastline_id = str(coastline.id)
         coastline_list = list(coastline_id)
         sliced_coastline = coastline_list[:8]
-        print(f'Coastline [{"".join(sliced_coastline)}]')
+        coastline_animals = coastline.animals
+        print(f'\ncoastline [{"".join(sliced_coastline)}]')
+
+        for animal in coastline_animals:
+            animal_id = str(animal.id)
+            animal_id_list = list(animal_id)
+            sliced_animal_id = animal_id_list[:8]
+            print(f'\t{animal.species} ({"".join(sliced_animal_id)})')
 
     input("\n\nPress any key to continue...")
