@@ -111,8 +111,9 @@ def release_animal(arboretum):
 
             arboretum.swamps[0].add_animal(animal)
             input("\nPress any key to return to the main menu \n>_")
+       
 
-# choice = input("\nChoose which biome to release the animal.\n>_ ")
+        # choice = input("\nChoose which biome to release the animal.\n>_ ")
 
     # def release_into_biome():
     # create list of biomes. loop through list to check if that biome is in the list. 
