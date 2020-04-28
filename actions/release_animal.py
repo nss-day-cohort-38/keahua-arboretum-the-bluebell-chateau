@@ -99,6 +99,26 @@ def release_animal(arboretum):
             arboretum.mountains[0].add_animal(animal)
             input("\nPress any key to return to the main menu \n>_")
 
+        if biome_choice == "2" and len(arboretum.mountains[1].animals) < 6:
+
+            arboretum.mountains[1].add_animal(animal)
+            input("\nPress any key to return to the main menu \n>_")
+
+        if biome_choice == "3" and len(arboretum.mountains[2].animals) < 6:
+
+            arboretum.mountains[2].add_animal(animal)
+            input("\nPress any key to return to the main menu \n>_")
+
+        if biome_choice == "4" and len(arboretum.mountains[3].animals) < 6:
+
+            arboretum.mountains[3].add_animal(animal)
+            input("\nPress any key to return to the main menu \n>_")
+
+        if biome_choice == "5" and len(arboretum.mountains[4].animals) < 6:
+
+            arboretum.mountains[4].add_animal(animal)
+            input("\nPress any key to return to the main menu \n>_")
+
     if choice == "8":
         animal = HappyFaceSpider()
         # swamp = Swamp()
@@ -125,6 +145,11 @@ def release_animal(arboretum):
         if biome_choice == "4" and len(arboretum.swamps[3].animals) < 8:
 
             arboretum.swamps[3].add_animal(animal)
+            input("\nPress any key to return to the main menu \n>_")
+
+        if biome_choice == "5" and len(arboretum.swamps[4].animals) < 8:
+
+            arboretum.swamps[4].add_animal(animal)
             input("\nPress any key to return to the main menu \n>_")
        
 
