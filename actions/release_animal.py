@@ -55,14 +55,27 @@ def release_animal(arboretum):
 
     if choice == "3":
         animal = Nene_Goose()
+         
+        for index, grassland in enumerate(arboretum.grasslands):
+            print(f"\n {index + 1}. {grassland} ({len(grassland.animals)} animals)")
 
         biome_choice = input(f"\nChoose which biome to release the {animal.species}.\n>_ ")
+
+        if biome_choice == "1" and len(arboretum.grasslands[0].animals) < 21:
+            arboretum.grasslands[0].add_animal(animal)
+            input("\nPress any key to return to the main menu \n>_")
 
     if choice == "4":
         animal = Kikakapu()
-
+        
+        for index, swamp in enumerate(arboretum.swamps):
+            print(f"\n {index + 1}. {swamp} ({len(swamp.animals)} animals)")
+    
         biome_choice = input(f"\nChoose which biome to release the {animal.species}.\n>_ ")
 
+        if biome_choice == "1" and len(arboretum.swamps[0].animals) < 21:
+            arboretum.swamps[0].add_animal(animal)
+            input("\nPress any key to return to the main menu \n>_")
 
     if choice == "5":
         animal = Pueo()

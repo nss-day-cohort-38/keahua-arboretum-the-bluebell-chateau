@@ -33,7 +33,7 @@ class Swamp(IContainsAnimals, IContainsPlants, Identifiable):
         except AttributeError:
             raise AttributeError("Error!")
     def __str__(self):
-        print("swamp object")
+        return (f"Swamp [{str(self.id)[:9]}]")
     # def addInhabitant(self, item):
     #     if not isinstance(item, IStagnant):
     #         raise TypeError(f"{item} is not of type IStagnant")
