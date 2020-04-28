@@ -41,7 +41,14 @@ def build_facility_report(arboretum):
         swamp_id = str(swamp.id)
         swamp_list = list(swamp_id)
         sliced_swamp = swamp_list[:8]
+        swamp_animals = swamp.animals
         print(f'Swamp [{"".join(sliced_swamp)}]')
+
+        for animal in swamp_animals:
+            animal_id = str(animal.id)
+            animal_id_list = list(animal_id)
+            sliced_animal_id = animal_id_list[:8]
+            print(f'\t{animal.species} ({"".join(sliced_animal_id)})')
 
     for coastline in arboretum.coastlines:
         coastline_id = str(coastline.id)
