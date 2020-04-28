@@ -14,12 +14,6 @@ from animals import Gecko, Nene_Goose, Kikakapu, Pueo, Ulae, Opeapea, HappyFaceS
 # Then a new input for which biome to append/add the animal choice to,
 # with a nested if for when the len() of that arr is maxed out, print a
 # message with another input for a new choice.
-# forest = Forest()
-# river = River()
-# coastline = Coastline()
-# mountain = Mountain()
-# swamp = Swamp()
-# grassland = Grassland()
 
 
 def release_animal(arboretum):
@@ -99,68 +93,17 @@ def release_animal(arboretum):
             arboretum.rivers[3].add_animal(animal)
             input("\nPress any key to return to the main menu \n>_")
 
-        
-
-    if choice == "3":
-        animal = Nene_Goose()
-        # grassland = Grassland()
-
-        print(f"\n1. Grassland ({len(grassland.animals)} animals)")
-
-        biome_choice = input(
-            f"\nChoose which biome to release the {animal.species}.\n>_ ")
-
-        if biome_choice == "1":
-            grassland.add_animal(animal)
-            arboretum.annex_grasslands(grassland)
-
-            print(f"\nGrassland ({len(grassland.animals)} animals)")
-            input("\nPress any key to return to the main menu \n>_")
-
-    if choice == "4":
-        animal = Kikakapu()
-        # river = River()
-        # swamp = Swamp()
-
-        print(f"\n1. River ({len(river.animals)} animals)")
-        print(f"2. Swamp ({len(swamp.animals)} animals)")
-
-        biome_choice = input(
-            f"\nChoose which biome to release the {animal.species}.\n>_ ")
-
-        if biome_choice == "1":
-            river.add_animal(animal)
-            arboretum.annex_rivers(river)
-            print(f"\nRiver ({len(river.animals)} animals)")
-            input("\nPress any key to return to the main menu \n>_")
-
-        elif biome_choice == "2":
-            swamp.add_animal(animal)
-            arboretum.annex_swamps(swamp)
-            print(f"Swamp ({len(swamp.animals)} animals)")
-            input("\nPress any key to return to the main menu \n>_")
-
     if choice == "5":
         animal = Pueo()
-        # grassland = Grassland()
-        # forest = Forest()
 
-        print(f"\n1. Grassland ({len(grassland.animals)} animals)")
-        print(f"2. Forest ({len(forest.animals)} animals)")
+        for index, forest in enumerate(arboretum.forests): 
+            print(f"\n {index + 1}. {forest} ({len(forest.animals)} animals)")
 
-        biome_choice = input(
-            f"\nChoose which biome to release the {animal.species}.\n>_ ")
+        biome_choice = input(f"\nChoose which biome to release the {animal.species}.\n>_ ")
 
-        if biome_choice == "1":
-            grassland.add_animal(animal)
-            arboretum.annex_grasslands(grassland)
-            print(f"\nGrassland ({len(grassland.animals)} animals)")
-            input("\nPress any key to return to the main menu \n>_")
 
-        elif biome_choice == "2":
-            forest.add_animal(animal)
-            arboretum.annex_forests(forest)
-            print(f"Forest ({len(forest.animals)} animals)")
+        if biome_choice == "1" and len(arboretum.forests[0].animals) < 20:
+            arboretum.forests[0].add_animal(animal)
             input("\nPress any key to return to the main menu \n>_")
 
     if choice == "6":
@@ -226,17 +169,17 @@ def release_animal(arboretum):
     # for environment_instance in arboretum[environment]:
     # print(evironment_instance)
 
-    biome_list = ["Coastlines", "Rivers", "Forests", "Mountains", "Swamps", "Grasslands"]
+    # biome_list = ["Coastlines", "Rivers", "Forests", "Mountains", "Swamps", "Grasslands"]
 
     # biomes = []
 
     # for river in arboretum.rivers:
     #     biomes.append(river)
 
-    for environment in biome_list:
-        if environment in arboretum:
-            for index, biome in enumerate(biome_list):
-                print(f"{index + 1}. {biome}")
+    # for environment in biome_list:
+    #     if environment in arboretum:
+    #         for index, biome in enumerate(biome_list):
+    #             print(f"{index + 1}. {biome}")
             # river_list = arboretum.rivers
             # for index, river in enumerate(river_list):
             #     print(f'{index + 1}. River {river.id}')
