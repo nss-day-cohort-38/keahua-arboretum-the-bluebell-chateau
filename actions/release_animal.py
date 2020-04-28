@@ -167,8 +167,6 @@ def release_animal(arboretum):
 
             arboretum.swamps[0].add_animal(animal)
             input("\nPress any key to return to the main menu \n>_")
-        biome_choice = input(
-            f"\nChoose which biome to release the {animal.species}.\n>_ ")
 
         if biome_choice == "2" and len(arboretum.swamps[1].animals) < 8:
 
