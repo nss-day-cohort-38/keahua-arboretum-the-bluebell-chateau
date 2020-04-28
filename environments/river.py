@@ -25,3 +25,6 @@ class River(IContainsAnimals, IContainsPlants, Identifiable):
                 self.plants.append(plant)
         except AttributeError:
             raise AttributeError("Cannot add plants that require brackish water or stagnant water to a river biome")
+
+    def __str__(self):
+        return(f"River [{str(self.id)[:8]}]")
