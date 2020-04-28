@@ -23,8 +23,4 @@ class Coastline(IContainsAnimals, IContainsPlants, Identifiable):
             raise AttributeError("Error!")
 
     def __str__(self):
-<<<<<<< HEAD
         return(f"Coastline [{str(self.id)[:8]}]")
-=======
-            return(f"Coastline [{str(self.id)[:8]}]")
->>>>>>> master
