@@ -35,7 +35,6 @@ def release_animal(arboretum):
 
     if choice == "1":
         animal = Gecko()
-        # forest = Forest()
         for index, forest in enumerate(arboretum.forests): 
             print(f"\n {index + 1}. {forest} ({len(forest.animals)} animals)")
 
@@ -45,74 +44,24 @@ def release_animal(arboretum):
         if biome_choice == "1" and len(arboretum.forests[0].animals) < 20:
 
             arboretum.forests[0].add_animal(animal)
-            # arboretum.annex_forests(forest)
-            # TODO: Figure out why it's jumping back to main menu before
-            # printing updated animals arr length
             input("\nPress any key to return to the main menu \n>_")
 
 
     if choice == "2":
         animal = RiverDolphin()
-        # river = River()
-        # coastline = Coastline()
 
-        print(f"\n1. River ({len(river.animals)} animals)")
-        print(f"2. Coastline ({len(coastline.animals)} animals)")
-
-        # SO weird. Once I added below line, broke the other animal choices
-        # until I re-added the below line to all other choices.
         biome_choice = input(f"\nChoose which biome to release the {animal.species}.\n>_ ")
-
-        if biome_choice == "1":
-            river.add_animal(animal)
-            arboretum.annex_rivers(river)
-
-            print(f"\nRiver ({len(river.animals)} animals)")
-            input("\nPress any key to return to the main menu \n>_")
-
-        elif biome_choice == "2":
-            coastline.add_animal(animal)
-            arboretum.annex_coastlines(coastline)
-            print(f"Coastline ({len(coastline.animals)} animals)")
-            input("\nPress any key to return to the main menu \n>_")
 
 
     if choice == "3":
         animal = Nene_Goose()
-        # grassland = Grassland()
-
-        print(f"\n1. Grassland ({len(grassland.animals)} animals)")
 
         biome_choice = input(f"\nChoose which biome to release the {animal.species}.\n>_ ")
-
-        if biome_choice == "1":
-            grassland.add_animal(animal)
-            arboretum.annex_grasslands(grassland)
-            
-            print(f"\nGrassland ({len(grassland.animals)} animals)")
-            input("\nPress any key to return to the main menu \n>_")
 
     if choice == "4":
         animal = Kikakapu()
-        # river = River()
-        # swamp = Swamp()
-
-        print(f"\n1. River ({len(river.animals)} animals)")
-        print(f"2. Swamp ({len(swamp.animals)} animals)")
 
         biome_choice = input(f"\nChoose which biome to release the {animal.species}.\n>_ ")
-
-        if biome_choice == "1":
-            river.add_animal(animal)
-            arboretum.annex_rivers(river)
-            print(f"\nRiver ({len(river.animals)} animals)")
-            input("\nPress any key to return to the main menu \n>_")
-
-        elif biome_choice == "2":
-            swamp.add_animal(animal)
-            arboretum.annex_swamps(swamp)
-            print(f"Swamp ({len(swamp.animals)} animals)")
-            input("\nPress any key to return to the main menu \n>_")
 
 
     if choice == "5":
@@ -133,17 +82,8 @@ def release_animal(arboretum):
 
     if choice == "6":
         animal = Ulae()
-        # coastline = Coastline()
-
-        print(f"\n1. Coastline ({len(coastline.animals)} animals)")
 
         biome_choice = input(f"\nChoose which biome to release the {animal.species}.\n>_ ")
-
-        if biome_choice == "1":
-            coastline.add_animal(animal)
-            arboretum.annex_coastlines(coastline)
-            print(f"\nCoastline ({len(coastline.animals)} animals)")
-            input("\nPress any key to return to the main menu \n>_")
 
     if choice == "7":
         animal = Opeapea()
