@@ -22,5 +22,6 @@ class Grassland(IContainsAnimals, IContainsPlants, Identifiable):
             self.plants.append(plant)
         except AttributeError:
             raise AttributeError("Error!")
+    
     def __str__(self):
-        print("grassland object")
+        return print(f"Grassland [{str(self.id)[:8]}]")
